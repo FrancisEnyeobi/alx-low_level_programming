@@ -11,7 +11,6 @@
  */
 void print_line(char *c, int s, int l)
 {
-
 	int j, k;
 
 	for (j = 0; j <= 9; j++)
@@ -35,7 +34,6 @@ void print_line(char *c, int s, int l)
  * print_buffer - prints a buffer
  * @b: buffer to print
  * @size: size of buffer
- *
  * Return: void
  */
 void print_buffer(char *b, int size)
@@ -52,5 +50,9 @@ void print_buffer(char *b, int size)
 		else
 		{
 			print_line(b, size % 10 - 1, i);
-			putchar('\n');
 		}
+		putchar('\n');
+	}
+	if (size == 0)
+		putchar('\n');
+}
